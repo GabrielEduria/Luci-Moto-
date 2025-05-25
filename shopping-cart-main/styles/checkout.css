@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* Helper variables */
+:root {
+  --bg: #ffffff;
+  --gray1: #333333;
+  --gray2: #4f4f4f;
+  --gray3: #828282;
+  --gray4: #e0e0e0;
+  --gray4: #f2f2f2;
+  --orange: #f2994a;
+}
+/* REset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  
+}
+
+/* Container - entire page content */
+.log-in {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  max-width: 900px;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+}
+
+
+/* MAIN */
+
+/* form section */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.form-area h2 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+.contact-info {
+  margin-bottom: 2rem;
+}
+
+.label {
+  font-size: 0.8rem;
+  color: var(--gray2);
+  margin-bottom: 1rem;
+}
+
+.input-area {
+  height: 2.7rem;
+  border: 1px solid var(--gray3);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 450px;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.input-area input,
+select {
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--gray3);
+  background-color: white;
+  height: 100%;
+}
+select {
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+}
+
+.btn-area {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+button {
+  border: none;
+  background-color: var(--orange);
+  color: white;
+  font-family: inherit;
+  width: 6.5rem;
+  height: 2.5rem;
+  border-radius: 0.6rem;
+}
+
+@media (max-width: 740px) {
+  .header {
+    margin: 1rem 0 1rem 0;
+  }
+  .header h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .main {
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .input-area input,
+  select {
+    font-size: 0.8rem;
+  }
+  .item-name {
+    font-size: 0.8rem;
+  }
+  .price {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .prev-price {
+    font-size: 0.6rem;
+    margin-left: 0.5rem;
+  }
+  .shipping-area,
+  .total-area {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}

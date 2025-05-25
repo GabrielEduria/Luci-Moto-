@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HiddenShop</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+    <link rel="stylesheet" href="styles/checkout.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+     <link rel="stylesheet" href="styles/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+  </head>
+  
+  <body>
+  <HEADER CLASS="INDEX-HEADER">
+    <!-- shopping cart -->
+    <div id="cart">
+      <div class="cart-content">
+        <header id="cart-header">
+          <h2 class="cart-title">Your cart</h2>
+          <span class="close-cart">&times;</span>
+        </header>
+        <div class="cart-wrapper">
+          <main id="cart-body">
+            <ul class="cart-menu">
+            </ul>
+          </main>
+          <div class="log-in">
+            <section class="form-section">
+              <form class="form-area">
+                <h2 class="contact-info-text">Contact information</h2>
+                <div class="contact-info">
+                  <div class="email-area postal-area">
+                    <label for="email" class="email label">E-mail</label>
+                    <div class="input-area">
+                      <span class="material-icons"> email </span>
+                      <input type="email" name="email" placeholder="Enter your email..." />
+                    </div>
+                  </div>
+                  <div class="phone-area postal-area">
+                    <label for="phone" class="phone label">Phone</label>
+                    <div class="input-area">
+                      <span class="material-icons"> phone </span>
+                      <input type="text" name="phone" placeholder="Enter your phone..." />
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <form class="form-area">
+                <h2 class="shipping-info-text">Shipping address</h2>
+                <div class="shipping-info">
+                  <div class="name-area postal-area">
+                    <label for="name" class="name label">Full name</label>
+                    <div class="input-area">
+                      <span class="material-icons"> account_circle </span>
+                      <input type="text" name="name" placeholder="Your full name.." />
+                    </div>
+                  </div>
+                  <div class="address-area postal-area">
+                    <label for="address" class="address label">Address</label>
+                    <div class="input-area">
+                      <span class="material-icons"> home </span>
+                      <input type="text" name="address" placeholder=" Your address .." />
+                    </div>
+                  </div>
+                  <div class="city-area postal-area">
+                    <label for="city" class="city label">City</label>
+                    <div class="input-area">
+                      <span class="material-icons"> location_city </span>
+                      <input type="text" name="city" placeholder="Your city.." />
+                    </div>
+                  </div>
+                  <div class="country-postal-area">
+                    <div class="form-area country-area">
+                      <label for="country" class="country label">Country</label>
+                      <div class="input-area">
+                        <span class="material-icons"> public </span>
+                        <select
+                          id="country"
+                          name="country"
+                          class="form-control select"
+                          placeholder="Your country.."
+                        >
+                          <option value="">Your country..</option>
+                          <option value="Afghanistan">Philippines</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-area postal-area">
+                      <label for="code" class="code label">Postal code</label>
+                      <div class="input-area">
+                        <span class="material-icons"> markunread_mailbox </span>
+                        <input type="text" name="code" placeholder="Your postal code.." />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkbox-area form-area">
+                    <input type="checkbox" name="checkbox" />
+                    <label for="checkbox" class="checkbox label"
+                      >Save this information for next time</label
+                    >
+                  </div>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+        <p class="total">Total : <span class="total-counter">$0</span></p>
+        <footer id="cart-footer">
+          <a href="#">confirm</a>
+          <a href="#" id="clear-btn" onclick='clearCart()'>clear cart</a>
+        </footer>
+      </div>
+    </div>
+    <!--- navigation --->
+    <section class="top-bar" id="top-bar">
+			<div class="container-top" id="container-top">
+				<img class="img-slider" src="resources/images/main-logo.png" alt="luci-logo"/>
+				<div id="search-bar">
+				<input class="search-input" type="text" placeholder="Search">
+				<span class="search-icon"><img src="resources/images/search.png" alt="search" width="30"></span>
+			</div>
+	
+        <span class="nav-icon">
+        <img class="user-icon" src="resources/images/icons8-user-60.png" alt="icons8-user-60">
+          <i class="fas fa-cart-plus cart-icon"></i>
+          <span class="cart-num"></span>
+          </span>
+			</div>
+	</section>
+  <section class="middle-bar" id="middle-bar">
+		<div class="nav-bar">
+			<ul>
+				<a class="nav-link" href="#helmet">HELMETS</a>
+				<a class="nav-link" href="#gears">GEARS</a>
+				<a class="nav-link" href="#accessories">ACCESSORIES</a>
+				<a class="nav-link" href="#parts">PARTS</a>
+			</ul>
+		</div>
+	</section>
+</HEADER>
+
+         
+    <div class="container1">
+      <section class="container products" id="helmet">
+        <h2 class="product-title">Helmet</h2>
+        <div class="product-content"></div>
+      </section>
+  
+      <section class="container products" id="gears">
+        <h2 class="product-title">Gears</h2>
+        <div class="product-content"></div>
+      </section>
+
+      <section class="container products" id="accessories">
+        <h2 class="product-title">Accessories</h2>
+        <div class="product-content"></div>
+      </section>
+
+      <section class="container products" id="parts">
+        <h2 class="product-title">Parts</h2>
+        <div class="product-content"></div>
+      </section>
+    </div>
+    <div class="to-top-btn-container"></div>
+
+    <script src="scripts/products.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
